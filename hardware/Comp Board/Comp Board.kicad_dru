@@ -1,0 +1,8 @@
+(version 1)
+(rule "3V3 Pour to 1V1 Pour Isolation"
+    (constraint clearance (min 0.6mm))
+    (condition "A.Type == 'Zone' && B.Type == 'Zone' && A.NetName == '/+3.3V' && B.NetName == '/+1V1'"))
+
+(rule "Inter-3V3 Domain Isolation"
+    (constraint clearance (min 0.6mm))
+    (condition "A.Type == 'Zone' && B.Type == 'Zone' && A.NetName == '/+3.3V' && B.NetName == '/VSYS_SW'"))

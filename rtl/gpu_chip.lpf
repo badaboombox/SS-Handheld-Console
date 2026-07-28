@@ -1,0 +1,250 @@
+# gpu_chip pinout - LFE5U-85F-CABGA381 (speed grade -8)
+# Generated from ECP5U85Pinout.csv. Edge allocation:
+#   SDRAM  -> banks 2/3 (right)   FMC -> banks 7/6 (left)
+#   panel  -> banks 0/1 (top)     clk_ref -> A4 (ULC_GPLL0T_IN)
+# Config (SPI flash/JTAG/PROGRAMN/DONE) uses dedicated bank-8 pins (automatic).
+
+FREQUENCY PORT "clk_ref" 50.0 MHZ;
+
+# clocks / reset
+LOCATE COMP "clk_ref" SITE "A4";  # PL11A (left bank6/7)
+IOBUF  PORT "clk_ref" IO_TYPE=LVCMOS33 PULLMODE=NONE;
+LOCATE COMP "rst" SITE "G2";  # PL47A (left bank6/7)
+IOBUF  PORT "rst" IO_TYPE=LVCMOS33;
+
+# SDRAM (32-bit, 2x W9864) - right edge banks 2/3 
+LOCATE COMP "sdram_clk" SITE "N20";  # PR83B (right bank2/3)
+IOBUF  PORT "sdram_clk" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_cke" SITE "N19";  # PR83A (right bank2/3)
+IOBUF  PORT "sdram_cke" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_cs_n" SITE "K17";  # PR29B (right bank2/3)
+IOBUF  PORT "sdram_cs_n" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_ras_n" SITE "L18";  # PR50C (right bank2/3)
+IOBUF  PORT "sdram_ras_n" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_cas_n" SITE "L17";  # PR50B (right bank2/3)
+IOBUF  PORT "sdram_cas_n" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_we_n" SITE "M18";  # PR50D (right bank2/3)
+IOBUF  PORT "sdram_we_n" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_ba[0]" SITE "K18";  # PR41D (right bank2/3)
+IOBUF  PORT "sdram_ba[0]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_ba[1]" SITE "J18";  # PR41C (right bank2/3)
+IOBUF  PORT "sdram_ba[1]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_a[0]" SITE "H18";  # PR20A (right bank2/3)
+IOBUF  PORT "sdram_a[0]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_a[1]" SITE "H20";  # PR41B (right bank2/3)
+IOBUF  PORT "sdram_a[1]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_a[2]" SITE "H17";  # PR20B (right bank2/3)
+IOBUF  PORT "sdram_a[2]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_a[3]" SITE "G20";  # PR38D (right bank2/3)
+IOBUF  PORT "sdram_a[3]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_a[4]" SITE "J20";  # PR44C (right bank2/3)
+IOBUF  PORT "sdram_a[4]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_a[5]" SITE "K19";  # PR44B (right bank2/3)
+IOBUF  PORT "sdram_a[5]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_a[6]" SITE "K20";  # PR44D (right bank2/3)
+IOBUF  PORT "sdram_a[6]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_a[7]" SITE "L19";  # PR47C (right bank2/3)
+IOBUF  PORT "sdram_a[7]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_a[8]" SITE "L20";  # PR47A (right bank2/3)
+IOBUF  PORT "sdram_a[8]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_a[9]" SITE "M19";  # PR47D (right bank2/3)
+IOBUF  PORT "sdram_a[9]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_a[10]" SITE "J19";  # PR44A (right bank2/3)
+IOBUF  PORT "sdram_a[10]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_a[11]" SITE "M20";  # PR47B (right bank2/3)
+IOBUF  PORT "sdram_a[11]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_dqm[0]" SITE "R17";  # PR56D (right bank2/3)
+IOBUF  PORT "sdram_dqm[0]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_dqm[1]" SITE "T19";  # PR89A (right bank2/3)
+IOBUF  PORT "sdram_dqm[1]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_dqm[2]" SITE "D20";  # PR35C (right bank2/3)
+IOBUF  PORT "sdram_dqm[2]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_dqm[3]" SITE "D19";  # PR35B (right bank2/3)
+IOBUF  PORT "sdram_dqm[3]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_dq[0]" SITE "U16";  # PR92C (right bank2/3)
+IOBUF  PORT "sdram_dq[0]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_dq[1]" SITE "U17";  # PR92B (right bank2/3)
+IOBUF  PORT "sdram_dq[1]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_dq[2]" SITE "U18";  # PR92A (right bank2/3)
+IOBUF  PORT "sdram_dq[2]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_dq[3]" SITE "T16";  # PR77A (right bank2/3)
+IOBUF  PORT "sdram_dq[3]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_dq[4]" SITE "T17";  # PR92D (right bank2/3)
+IOBUF  PORT "sdram_dq[4]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_dq[5]" SITE "U19";  # PR89C (right bank2/3)
+IOBUF  PORT "sdram_dq[5]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_dq[6]" SITE "T18";  # PR89D (right bank2/3)
+IOBUF  PORT "sdram_dq[6]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_dq[7]" SITE "U20";  # PR86D (right bank2/3)
+IOBUF  PORT "sdram_dq[7]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_dq[8]" SITE "T20";  # PR86C (right bank2/3)
+IOBUF  PORT "sdram_dq[8]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_dq[9]" SITE "R18";  # PR89B (right bank2/3)
+IOBUF  PORT "sdram_dq[9]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_dq[10]" SITE "R20";  # PR86B (right bank2/3)
+IOBUF  PORT "sdram_dq[10]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_dq[11]" SITE "P17";  # PR53D (right bank2/3)
+IOBUF  PORT "sdram_dq[11]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_dq[12]" SITE "P19";  # PR83C (right bank2/3)
+IOBUF  PORT "sdram_dq[12]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_dq[13]" SITE "P18";  # PR83D (right bank2/3)
+IOBUF  PORT "sdram_dq[13]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_dq[14]" SITE "P20";  # PR86A (right bank2/3)
+IOBUF  PORT "sdram_dq[14]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_dq[15]" SITE "N18";  # PR53C (right bank2/3)
+IOBUF  PORT "sdram_dq[15]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_dq[16]" SITE "F20";  # PR38C (right bank2/3)
+IOBUF  PORT "sdram_dq[16]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_dq[17]" SITE "G19";  # PR41A (right bank2/3)
+IOBUF  PORT "sdram_dq[17]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_dq[18]" SITE "G18";  # PR17B (right bank2/3)
+IOBUF  PORT "sdram_dq[18]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_dq[19]" SITE "F19";  # PR38B (right bank2/3)
+IOBUF  PORT "sdram_dq[19]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_dq[20]" SITE "F18";  # PR14D (right bank2/3)
+IOBUF  PORT "sdram_dq[20]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_dq[21]" SITE "E19";  # PR35D (right bank2/3)
+IOBUF  PORT "sdram_dq[21]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_dq[22]" SITE "E20";  # PR38A (right bank2/3)
+IOBUF  PORT "sdram_dq[22]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_dq[23]" SITE "E18";  # PR14C (right bank2/3)
+IOBUF  PORT "sdram_dq[23]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_dq[24]" SITE "F17";  # PR17A (right bank2/3)
+IOBUF  PORT "sdram_dq[24]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_dq[25]" SITE "C20";  # PR35A (right bank2/3)
+IOBUF  PORT "sdram_dq[25]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_dq[26]" SITE "E17";  # PR14B (right bank2/3)
+IOBUF  PORT "sdram_dq[26]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_dq[27]" SITE "D18";  # PR14A (right bank2/3)
+IOBUF  PORT "sdram_dq[27]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_dq[28]" SITE "F16";  # PR11D (right bank2/3)
+IOBUF  PORT "sdram_dq[28]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_dq[29]" SITE "C18";  # PR11A (right bank2/3)
+IOBUF  PORT "sdram_dq[29]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_dq[30]" SITE "D17";  # PR11B (right bank2/3)
+IOBUF  PORT "sdram_dq[30]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+LOCATE COMP "sdram_dq[31]" SITE "E16";  # PR11C (right bank2/3)
+IOBUF  PORT "sdram_dq[31]" IO_TYPE=LVCMOS33 DRIVE=4 SLEWRATE=SLOW;
+
+# FMC (STM32) - left edge banks 7/6 
+LOCATE COMP "fmc_ne" SITE "F1";  # PL47B (left bank6/7)
+IOBUF  PORT "fmc_ne" IO_TYPE=LVCMOS33;
+LOCATE COMP "fmc_nwe" SITE "D2";  # PL38C (left bank6/7)
+IOBUF  PORT "fmc_nwe" IO_TYPE=LVCMOS33;
+LOCATE COMP "fmc_noe" SITE "D1";  # PL38B (left bank6/7)
+IOBUF  PORT "fmc_noe" IO_TYPE=LVCMOS33;
+LOCATE COMP "fmc_nwait" SITE "E1";  # PL38D (left bank6/7)
+IOBUF  PORT "fmc_nwait" IO_TYPE=LVCMOS33;
+LOCATE COMP "cpu_irq" SITE "N1";  # PL89D (left bank6/7)
+IOBUF  PORT "cpu_irq" IO_TYPE=LVCMOS33;
+LOCATE COMP "fmc_a[0]" SITE "J1";  # PL53B (left bank6/7)
+IOBUF  PORT "fmc_a[0]" IO_TYPE=LVCMOS33;
+LOCATE COMP "fmc_a[1]" SITE "K2";  # PL53A (left bank6/7)
+IOBUF  PORT "fmc_a[1]" IO_TYPE=LVCMOS33;
+LOCATE COMP "fmc_a[2]" SITE "K1";  # PL53D (left bank6/7)
+IOBUF  PORT "fmc_a[2]" IO_TYPE=LVCMOS33;
+LOCATE COMP "fmc_a[3]" SITE "L2";  # PL86D (left bank6/7)
+IOBUF  PORT "fmc_a[3]" IO_TYPE=LVCMOS33;
+LOCATE COMP "fmc_a[4]" SITE "L1";  # PL89C (left bank6/7)
+IOBUF  PORT "fmc_a[4]" IO_TYPE=LVCMOS33;
+LOCATE COMP "fmc_a[5]" SITE "M1";  # PL89B (left bank6/7)
+IOBUF  PORT "fmc_a[5]" IO_TYPE=LVCMOS33;
+LOCATE COMP "fmc_a[6]" SITE "P4";  # PL92D (left bank6/7)
+IOBUF  PORT "fmc_a[6]" IO_TYPE=LVCMOS33;
+LOCATE COMP "fmc_a[7]" SITE "L5";  # PL56D (left bank6/7)
+IOBUF  PORT "fmc_a[7]" IO_TYPE=LVCMOS33;
+LOCATE COMP "fmc_a[8]" SITE "M4";  # PL83A (left bank6/7)
+IOBUF  PORT "fmc_a[8]" IO_TYPE=LVCMOS33;
+LOCATE COMP "fmc_a[9]" SITE "K5";  # PL56B (left bank6/7)
+IOBUF  PORT "fmc_a[9]" IO_TYPE=LVCMOS33;
+LOCATE COMP "fmc_d[0]" SITE "B2";  # PL35C (left bank6/7)
+IOBUF  PORT "fmc_d[0]" IO_TYPE=LVCMOS33;
+LOCATE COMP "fmc_d[1]" SITE "B1";  # PL35B (left bank6/7)
+IOBUF  PORT "fmc_d[1]" IO_TYPE=LVCMOS33;
+LOCATE COMP "fmc_d[2]" SITE "C1";  # PL38A (left bank6/7)
+IOBUF  PORT "fmc_d[2]" IO_TYPE=LVCMOS33;
+LOCATE COMP "fmc_d[3]" SITE "C2";  # PL35D (left bank6/7)
+IOBUF  PORT "fmc_d[3]" IO_TYPE=LVCMOS33;
+LOCATE COMP "fmc_d[4]" SITE "K4";  # PL56A (left bank6/7)
+IOBUF  PORT "fmc_d[4]" IO_TYPE=LVCMOS33;
+LOCATE COMP "fmc_d[5]" SITE "H5";  # PL41C (left bank6/7)
+IOBUF  PORT "fmc_d[5]" IO_TYPE=LVCMOS33;
+LOCATE COMP "fmc_d[6]" SITE "G5";  # PL41B (left bank6/7)
+IOBUF  PORT "fmc_d[6]" IO_TYPE=LVCMOS33;
+LOCATE COMP "fmc_d[7]" SITE "F5";  # PL20D (left bank6/7)
+IOBUF  PORT "fmc_d[7]" IO_TYPE=LVCMOS33;
+LOCATE COMP "fmc_d[8]" SITE "E5";  # PL20C (left bank6/7)
+IOBUF  PORT "fmc_d[8]" IO_TYPE=LVCMOS33;
+LOCATE COMP "fmc_d[9]" SITE "D5";  # PL17B (left bank6/7)
+IOBUF  PORT "fmc_d[9]" IO_TYPE=LVCMOS33;
+LOCATE COMP "fmc_d[10]" SITE "C5";  # PL11D (left bank6/7)
+IOBUF  PORT "fmc_d[10]" IO_TYPE=LVCMOS33;
+LOCATE COMP "fmc_d[11]" SITE "B5";  # PL11C (left bank6/7)
+IOBUF  PORT "fmc_d[11]" IO_TYPE=LVCMOS33;
+LOCATE COMP "fmc_d[12]" SITE "A5";  # PL11B (left bank6/7)
+IOBUF  PORT "fmc_d[12]" IO_TYPE=LVCMOS33;
+LOCATE COMP "fmc_d[13]" SITE "A3";  # PL14C (left bank6/7)
+IOBUF  PORT "fmc_d[13]" IO_TYPE=LVCMOS33;
+LOCATE COMP "fmc_d[14]" SITE "A2";  # PL35A (left bank6/7)
+IOBUF  PORT "fmc_d[14]" IO_TYPE=LVCMOS33;
+LOCATE COMP "fmc_d[15]" SITE "B3";  # PL14D (left bank6/7)
+IOBUF  PORT "fmc_d[15]" IO_TYPE=LVCMOS33;
+
+# RGB panel - top edge banks 0/1 
+LOCATE COMP "pclk" SITE "A6";  # PT4A (top bank0/1)
+IOBUF  PORT "pclk" IO_TYPE=LVCMOS33;
+LOCATE COMP "hsync" SITE "B6";  # PT4B (top bank0/1)
+IOBUF  PORT "hsync" IO_TYPE=LVCMOS33;
+LOCATE COMP "vsync" SITE "C6";  # PT11A (top bank0/1)
+IOBUF  PORT "vsync" IO_TYPE=LVCMOS33;
+LOCATE COMP "de" SITE "D6";  # PT6B (top bank0/1)
+IOBUF  PORT "de" IO_TYPE=LVCMOS33;
+LOCATE COMP "rgb[0]" SITE "D9";  # PT20A (top bank0/1)
+IOBUF  PORT "rgb[0]" IO_TYPE=LVCMOS33;
+LOCATE COMP "rgb[1]" SITE "A8";  # PT18B (top bank0/1)
+IOBUF  PORT "rgb[1]" IO_TYPE=LVCMOS33;
+LOCATE COMP "rgb[2]" SITE "B8";  # PT15B (top bank0/1)
+IOBUF  PORT "rgb[2]" IO_TYPE=LVCMOS33;
+LOCATE COMP "rgb[3]" SITE "C8";  # PT15A (top bank0/1)
+IOBUF  PORT "rgb[3]" IO_TYPE=LVCMOS33;
+LOCATE COMP "rgb[4]" SITE "D8";  # PT13B (top bank0/1)
+IOBUF  PORT "rgb[4]" IO_TYPE=LVCMOS33;
+LOCATE COMP "rgb[5]" SITE "A7";  # PT18A (top bank0/1)
+IOBUF  PORT "rgb[5]" IO_TYPE=LVCMOS33;
+LOCATE COMP "rgb[6]" SITE "C7";  # PT11B (top bank0/1)
+IOBUF  PORT "rgb[6]" IO_TYPE=LVCMOS33;
+LOCATE COMP "rgb[7]" SITE "D7";  # PT9B (top bank0/1)
+IOBUF  PORT "rgb[7]" IO_TYPE=LVCMOS33;
+LOCATE COMP "rgb[8]" SITE "A11";  # PT63B (top bank0/1)
+IOBUF  PORT "rgb[8]" IO_TYPE=LVCMOS33;
+LOCATE COMP "rgb[9]" SITE "D10";  # PT56A (top bank0/1)
+IOBUF  PORT "rgb[9]" IO_TYPE=LVCMOS33;
+LOCATE COMP "rgb[10]" SITE "C10";  # PT58B (top bank0/1)
+IOBUF  PORT "rgb[10]" IO_TYPE=LVCMOS33;
+LOCATE COMP "rgb[11]" SITE "B10";  # PT60B (top bank0/1)
+IOBUF  PORT "rgb[11]" IO_TYPE=LVCMOS33;
+LOCATE COMP "rgb[12]" SITE "A10";  # PT63A (top bank0/1)
+IOBUF  PORT "rgb[12]" IO_TYPE=LVCMOS33;
+LOCATE COMP "rgb[13]" SITE "A9";  # PT60A (top bank0/1)
+IOBUF  PORT "rgb[13]" IO_TYPE=LVCMOS33;
+LOCATE COMP "rgb[14]" SITE "B9";  # PT58A (top bank0/1)
+IOBUF  PORT "rgb[14]" IO_TYPE=LVCMOS33;
+LOCATE COMP "rgb[15]" SITE "C9";  # PT54A (top bank0/1)
+IOBUF  PORT "rgb[15]" IO_TYPE=LVCMOS33;
+LOCATE COMP "rgb[16]" SITE "A14";  # PT83A (top bank0/1)
+IOBUF  PORT "rgb[16]" IO_TYPE=LVCMOS33;
+LOCATE COMP "rgb[17]" SITE "A13";  # PT76B (top bank0/1)
+IOBUF  PORT "rgb[17]" IO_TYPE=LVCMOS33;
+LOCATE COMP "rgb[18]" SITE "B13";  # PT78A (top bank0/1)
+IOBUF  PORT "rgb[18]" IO_TYPE=LVCMOS33;
+LOCATE COMP "rgb[19]" SITE "A12";  # PT76A (top bank0/1)
+IOBUF  PORT "rgb[19]" IO_TYPE=LVCMOS33;
+LOCATE COMP "rgb[20]" SITE "C12";  # PT71B (top bank0/1)
+IOBUF  PORT "rgb[20]" IO_TYPE=LVCMOS33;
+LOCATE COMP "rgb[21]" SITE "B12";  # PT71A (top bank0/1)
+IOBUF  PORT "rgb[21]" IO_TYPE=LVCMOS33;
+LOCATE COMP "rgb[22]" SITE "C11";  # PT65B (top bank0/1)
+IOBUF  PORT "rgb[22]" IO_TYPE=LVCMOS33;
+LOCATE COMP "rgb[23]" SITE "B11";  # PT65A (top bank0/1)
+IOBUF  PORT "rgb[23]" IO_TYPE=LVCMOS33;
+

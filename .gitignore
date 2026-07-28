@@ -1,0 +1,21 @@
+# Build outputs (regenerable; README + recipe are tracked)
+build/*.bit
+build/*.svf
+*.config
+*.json.gz
+
+# Simulation outputs
+obj_dir/
+*.vcd
+*.fst
+*.ppm
+
+# KiCad backups / locks / caches
+hardware/**/*-backups/
+hardware/**/*.lck
+hardware/**/fp-info-cache/
+*.kicad_prl
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
