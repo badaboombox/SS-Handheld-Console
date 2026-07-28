@@ -44,6 +44,7 @@ Exported for quick viewing without KiCad:
 
 - [schematics.pdf](schematics.pdf) - all sheets.
 - [board_layout.pdf](board_layout.pdf) - all six copper layers, one per page.
+- [BOM.csv](BOM.csv) - grouped bill of materials (76 line items).
 
 ## License
 
