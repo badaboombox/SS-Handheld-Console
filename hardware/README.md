@@ -40,6 +40,11 @@ an ENIG finish for the fine-pitch BGA.
 `Comp Board/` is the KiCad project: schematics, PCB, and the footprint and
 3D-model libraries. Open `Comp Board/Comp Board.kicad_pro` in KiCad.
 
+Exported for quick viewing without KiCad:
+
+- [schematics.pdf](schematics.pdf) - all sheets.
+- [renders/board_layout.svg](renders/board_layout.svg) - front-copper layout view.
+
 ## License
 
 The hardware is licensed under CERN-OHL-P-2.0 (see the LICENSE file in this
