@@ -43,7 +43,7 @@ an ENIG finish for the fine-pitch BGA.
 Exported for quick viewing without KiCad:
 
 - [schematics.pdf](schematics.pdf) - all sheets.
-- [renders/board_layout.svg](renders/board_layout.svg) - front-copper layout view.
+- [board_layout.pdf](board_layout.pdf) - all six copper layers, one per page.
 
 ## License
 
