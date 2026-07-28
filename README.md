@@ -85,6 +85,10 @@ The full recipe and flashing steps are in [build/README.md](build/README.md).
 
 ## Hardware
 
+<p align="center">
+  <img src="hardware/renders/board_angled.png" width="85%" alt="3D render of the SS Handheld Console mainboard">
+</p>
+
 A 6-layer board in KiCad: the ECP5-85 FPGA and STM32H723 MCU, 32-bit SDRAM, a 4.3
 inch 480x272 RGB panel with a boost-driven backlight, microSD, USB-C charging,
 stereo audio, and tactile controls. Schematics, layout, and 3D renders are under

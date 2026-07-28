@@ -4,6 +4,18 @@ The KiCad project for the SS Handheld Console board. It's a 6-layer PCB that
 carries the FPGA, the MCU, memory, the display interface, power, audio amps, and
 controls (basically everything).
 
+## Renders
+
+<p align="center">
+  <img src="renders/board_angled.png" width="80%" alt="Angled 3D render of the mainboard">
+</p>
+<p align="center">
+  <img src="renders/board_top.png" width="49%" alt="Top view">
+  <img src="renders/board_bottom.png" width="49%" alt="Bottom view">
+</p>
+
+KiCad 3D renders of the current board (top, angled, and bottom).
+
 ## Main parts
 
 - FPGA: Lattice ECP5 LFE5U-85F-8, caBGA-381, 0.8 mm pitch. Runs the main graphics engine.
